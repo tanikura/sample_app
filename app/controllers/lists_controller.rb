@@ -11,10 +11,11 @@ class ListsController < ApplicationController
     list.save
     # 4.トップ画面へリダイレクト
     redirect_to '/top'
-    
+
   end
 
   def index
+    @lists = List.all
   end
 
   def show
@@ -22,7 +23,7 @@ class ListsController < ApplicationController
 
   def edit
   end
-  
+
   private
   # ストロングパラメータ
   def list_params
