@@ -30,7 +30,7 @@ class ListsController < ApplicationController
     list.update(list_params)
     redirect_to list_path(list.id)
   end
-  
+
   def destroy
     list = List.find(params[:id]) # データ（レコード）を1件取得
     list.destroy # データ（レコード）を削除
